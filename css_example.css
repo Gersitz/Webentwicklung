@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+}
+
+nav {
+    background-color: #8c8c8c;
+}
+
+ul {
+    list-style-type: none;
+    padding: 5px;
+    margin-top: 0;
+}
+
+li {
+    display: inline;
+    margin: 0 5px
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color .5s;
+}
+
+a:hover {
+    color: rgb(180,180,180);
+    font-weight: 900;
+    transition: all 1s;
+}
+
+#first-link::before {
+    content: 'test';
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+img {
+    width: 100px;
+    height: auto;
+}
