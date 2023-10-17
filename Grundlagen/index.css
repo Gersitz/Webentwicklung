@@ -1,0 +1,15 @@
+body {
+    background-color: #bababa;
+}
+.liste {
+    border: 1px solid magenta;
+}
+#heading2 {
+    color: aqua;
+    font-size: 20px;
+    background-color: blueviolet;
+    border: 2px dashed rgb(42,42,42);
+}
+img {
+    box-shadow: 5px 5px 5px rgb(42,42,42);
+}
