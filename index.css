@@ -6,6 +6,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(/assets/eldenring_default.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'IM Fell English', serif;
+    font-weight: 400;
 }
 
 .container {
@@ -17,14 +23,14 @@ body {
 }
 
 .box {
-    border: 7px double purple;
+    border: 7px double rgb(26, 49, 49);
     border-radius: 0.7em;
     background-color: rgba(0,0,0,.6);
     padding: 10px;
 }
 
 .box > h2 {
-    color: purple;
+    color: rgb(57, 92, 106);
     margin-top: 0;
 }
 
