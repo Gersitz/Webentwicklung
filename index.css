@@ -14,6 +14,15 @@ body {
     font-weight: 400;
 }
 
+#clock {
+    
+    font-size: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 15px;
+    color: #c0c0c0;
+    text-shadow: 5px 5px 5px #000000;
+}
+
 .container {
     width: 100%;
     display: flex;
@@ -27,6 +36,8 @@ body {
     border-radius: 0.7em;
     background-color: rgba(0,0,0,.6);
     padding: 10px;
+    width: 15vw;
+    min-width: 175px;
 }
 
 .box > h2 {
@@ -42,4 +53,12 @@ body {
 .box > ul > li > a {
     color: #c0c0c0;
     text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.2s;
+}
+
+.box > ul > li > a:hover {
+    color: rgb(57, 92, 106);
+    font-weight: 600;
+    transition: all 0.2s;
 }

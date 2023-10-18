@@ -1,67 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulare</title>
 </head>
+
 <body>
     <h1>Formular</h1>
-    <form action="/results" method="get">
+    <form method="post" action="https://pfad-zum-server.com/formvalidation">
         <label for="vorname">Vorname</label>
-        <input name="vorname" id="vorname" type="text" placeholder="Max">
+        <input required name="vorname" id="vorname" type="text">
         <br>
         <label for="nachname">Nachname</label>
-        <input name="nachname" id="nachname" type="text" placeholder="Mustermann">
+        <input name="nachname" id="nachname" type="text">
         <br>
-        <label for="password">Passwort</label>
-        <input name="password" id="password" type="password">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
         <br>
-        <label for="email">Email</label>
-        <input name="email" id="email" type="email">
+        <label for="email">EMail</label>
+        <input type="email" name="email" id="email">
         <br>
         <label for="date">Geburtsdatum</label>
-        <input name="date" id="date" type="date">
+        <input type="date" name="date" id="date">
         <br>
         <label for="tel">Telefon</label>
-        <input name="tel" id="tel" type="tel">
+        <input type="tel" name="tel" id="tel">
 
         <div>
             <label for="html">HTML</label>
-            <input name="fav_language" id="html" type="radio" value="html">
-        </div>
-        <div>
+            <input type="radio" name="fav_language" id="html" value="html">
+            <br>
             <label for="css">CSS</label>
-            <input name="fav_language" id="css" type="radio" value="css">
-        </div>
-        <div>
-            <label for="html">JS</label>
-            <input name="fav_language" id="js" type="radio" value="js">
-        </div>
-
-        <div>
-            <label for="code">VSCode</label>
-            <input name="code" id="code" type="checkbox" value="code">
+            <input checked type="radio" name="fav_language" id="css" value="css">
             <br>
-            <label for="vs">Visual Studio</label>
-            <input name="vs" id="vs" type="checkbox" value="vs">
+            <label for="js">JS</label>
+            <input type="radio" name="fav_language" id="js" value="js">
             <br>
-            <label for="vim">VIM</label>
-            <input name="vim" id="vim" type="checkbox" value="vim">
         </div>
-
-        <select name="verkehrsmittel" id="verkehrsmittel" multiple>
-            <option value="bus">Bus</option>
-            <option value="auto">Auto</option>
-            <option value="fahrrad">Fahrrad</option>
-            <option value="escooter">E-Scooter</option>
-        </select>
-        <br>
-        <textarea name="myText" id="myText" cols="80" rows="20"></textarea>
-
         <br>
         <button type="submit">Abschicken</button>
         <button type="reset">Zurücksetzen</button>
     </form>
 </body>
+
 </html>
