@@ -1,7 +1,7 @@
 :root {
     --color-primary: rgb(53, 108, 113);
     --color-secondary: rgb(34, 85, 91);
-    --color-clock: rgb(130, 156, 159);
+    --color-opentext: rgb(130, 156, 159);
     --text-shadow: rgb(0, 0, 0);
     --opaque-bg: rgba(0, 0, 0, .6);
 }
@@ -32,7 +32,7 @@ body {
     font-size: 4rem;
     margin-top: 4rem;
     margin-bottom: 15px;
-    color: var(--color-clock);
+    color: var(--color-opentext);
     text-shadow: 5px 5px 5px #000000;
 }
 
@@ -74,4 +74,36 @@ body {
     color: var(--color-primary);
     font-weight: 600;
     transition: all 0.2s;
+}
+
+[joke-norris] {
+    color: var(--color-opentext);
+    font-size: 1.2em;
+    border: 3px solid var(--color-secondary);
+    border-radius: 0.5em;
+    background-color: var(--opaque-bg);
+    padding: 5px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    box-shadow: 5px 5px 5px var(--text-shadow) ;
+}
+
+@media screen and (max-width: 880px) {
+    body {
+        background-image: url('assets/eldenring_mobile.jpg');
+        height: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        min-width: 50vw;
+    }
+
+    #clock {
+        margin-top: 20px;
+    }
 }

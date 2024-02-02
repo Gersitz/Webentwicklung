@@ -7,18 +7,30 @@ const PI = 3.141592; // Konstante Variable
 y = 50;
 
 const clock_elem = document.getElementById('clock');
+const joke_elem = document.querySelector('[joke-norris]')
 
 console.log(clock_elem);
 
+function formatTime(timeValue) {
+    return timeValue < 10 ? `0${timeValue}` : timeValue;
+}
+
 function getTime() {
     let date = new Date();
-    let hour = date.getHours();
-    let minute = date.getMinutes();
-    let seconds = date.getSeconds();
+    let hours = formatTime(date.getHours());
+    let minutes = formatTime(date.getMinutes());
+    let seconds = formatTime(date.getSeconds());
 
-    return `${hour}:${minute}:${seconds}`;
+    return `${hours}:${minutes}:${seconds}`;
 }
 
 setInterval(() => {
-    clock_elem.innerHTML = getTime();
-}, 100);
+    clock_elem.innerText = getTime();
+}, 1000);
+
+fetch('https://api.chucknorris.io/jokes/random?category=dev')
+    .then(httpResponse => {
+        return httpResponse.json();
+    }).then(joke => {
+        joke_elem.innerText = joke.value;
+    })
